@@ -1,7 +1,7 @@
 joi-express
 ===========
 
-[![Build Status](https://travis-ci.org/Threadster/express-joi-validator.svg)](https://travis-ci.org/Threadster/express-joi-validator)
+[![Build Status](https://travis-ci.org/vforv/joi-express.svg?branch=master)](https://travis-ci.org/vforv/joi-express) [![Coverage Status](https://coveralls.io/repos/github/vforv/joi-express/badge.svg?branch=master)](https://coveralls.io/github/vforv/joi-express?branch=master)
 
 Simple validation middleware for express using the [Joi](https://github.com/spumko/joi) validation suite.
 
