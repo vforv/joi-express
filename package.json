@@ -1,76 +1,45 @@
 {
-  "_from": "express-joi-validator@^2.0.0",
-  "_id": "express-joi-validator@2.0.0",
-  "_inBundle": false,
-  "_integrity": "sha1-JOJuaoMn9pmF7XJYjwDildw+MjQ=",
-  "_location": "/express-joi-validator",
-  "_phantomChildren": {
-    "hoek": "2.16.3",
-    "isemail": "1.2.0",
-    "topo": "1.1.0"
-  },
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "express-joi-validator@^2.0.0",
-    "name": "express-joi-validator",
-    "escapedName": "express-joi-validator",
-    "rawSpec": "^2.0.0",
-    "saveSpec": null,
-    "fetchSpec": "^2.0.0"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/express-joi-validator/-/express-joi-validator-2.0.0.tgz",
-  "_shasum": "24e26e6a8327f69985ed72588f00e295dc3e3234",
-  "_spec": "express-joi-validator@^2.0.0",
-  "_where": "/home/vladimir/Documents/liquidum/vpnhub_server",
-  "author": {
-    "name": "Josh Holloway"
-  },
-  "bugs": {
-    "url": "https://github.com/threadster/express-joi-validator/issues"
-  },
-  "bundleDependencies": false,
-  "dependencies": {
-    "boom": "2.6.x",
-    "extend": "2.0.x",
-    "joi": "6.x.x"
-  },
-  "deprecated": false,
-  "description": "Express Middleware for Walmart's Joi Validator",
-  "devDependencies": {
-    "body-parser": "1.10.x",
-    "chai": "1.10.x",
-    "express": "4.10.x",
-    "istanbul": "0.3.x",
-    "mocha": "2.1.x",
-    "supertest": "0.15.x"
-  },
-  "engines": {
-    "node": ">=0.10.30"
-  },
-  "homepage": "https://github.com/threadster/express-joi-validator",
-  "keywords": [
-    "express",
-    "joi",
-    "middleware",
-    "validation"
-  ],
-  "license": "MIT",
+  "name": "joi-express",
+  "version": "1.0.0",
+  "description": "Simple validation middleware for express using the joi validation suite.",
   "main": "index.js",
-  "name": "express-joi-validator",
-  "peerDependencies": {
-    "joi": "6.x.x"
+  "directories": {
+    "test": "test"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/threadster/express-joi-validator.git"
+  "dependencies": {
+    "boom": "7.2.0",
+    "extend": "3.0.2",
+    "joi": "13.x.x"
+  },
+  "devDependencies": {
+    "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
+    "express": "^4.16.3",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "supertest": "^3.1.0"
+  },
+  "peerDependencies": {
+    "joi": "13.x.x"
   },
   "scripts": {
     "coverage": "istanbul cover _mocha -- -u exports -R spec",
     "test": "mocha"
   },
-  "version": "2.0.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vforv/joi-express.git"
+  },
+  "keywords": [
+    "middleware",
+    "joi",
+    "validation",
+    "express"
+  ],
+  "author": "Vladimir Djukic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vforv/joi-express/issues"
+  },
+  "homepage": "https://github.com/vforv/joi-express#readme"
 }
