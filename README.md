@@ -31,6 +31,9 @@ var querySchema = {
     query: {
         limit: Joi.number().default(10).min(10).max(100),
         offset: Joi.number().default(10).min(10).max(100)
+    },
+    headers: {
+        authorization: Joi.string().required()
     }
 };
 
