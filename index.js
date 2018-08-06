@@ -6,6 +6,13 @@ module.exports = function validate(schema, options) {
   options = options || {};
 
   return function validateRequest(req, res, next) {
+    // this is way to to return joi schema without validation
+    // we return this in the express server when we want to create auto doc
+    /* istanbul ignore if */
+    if(req === 'schemaBypass') {
+      return schema;
+    }
+
     /* istanbul ignore if */
     if (!schema) {
       return next();
