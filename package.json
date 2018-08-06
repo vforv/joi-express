@@ -1,6 +1,6 @@
 {
   "name": "joi-express",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple validation middleware for express using the joi validation suite.",
   "main": "index.js",
   "directories": {
