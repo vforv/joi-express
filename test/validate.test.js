@@ -33,6 +33,12 @@ var headersSchema = {
   }
 };
 
+var responseSchema = {
+  response: Joi.object().keys({
+    id: Joi.number().positive().required().description('identifier')
+  }).required().description('payload')
+}
+
 app.get('/users/one/:id', Validate(headersSchema), function (req, res, next) {
   res.send({
     ...req.headers,
@@ -51,6 +57,11 @@ app.get('/users/:id', Validate(paramsSchema), function (req, res, next) {
 app.post('/users', Validate(bodySchema), function (req, res, next) {
   res.send(req.body);
 });
+
+app.get('/response/:id', Validate(responseSchema), (req, res) => {
+  const id = +req.params.id || 'none'
+  res.sendValidJson({ id })
+})
 
 app.get('/', Validate(), function (req, res, next) {
   res.send();
@@ -128,6 +139,22 @@ describe('express-joi-validator tests', function () {
       })
       .end(done);
   });
+
+  it('should return a 500 for response validation', function (done) {
+    request(app)
+      .get('/response/one')
+      .expect(500)
+      .expect(function (res) {
+        expect(res.body.statusCode).to.equal(500);
+      })
+      .end(done);
+  });
+  it('should return a 200 for correct response validation', function () {
+    return request(app)
+      .get('/response/1')
+      .expect(200)
+  });
+
 });
 
 
